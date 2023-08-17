@@ -1,37 +1,41 @@
 ---
 title: 'Stripe'
-description: 'Display inline code and code blocks'
+description: 'View and manage your Stripe integrations'
 icon: 'code'
 ---
 
-## Basic
+## Name of Stripe Integration 1
+_/payment/stripe/unqiue-name-1_
+<AccordionGroup>
+  <Accordion title="View Details">
+    > Created on 07/23/2023
+    #
+    `STRIPE_SECRET_KEY=**************43fklsj`
+  </Accordion>
+</AccordionGroup>
 
-### Inline Code
+## Name of Stripe Integration 2
+_/payment/stripe/unqiue-name-2_
+<AccordionGroup>
+  <Accordion title="View Details">
+    > Created on 07/23/2023
+    #
+    `STRIPE_SECRET_KEY=**************43fklsj`
+  </Accordion>
+</AccordionGroup>
 
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
+#
 
-```
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
-```
+Learn more by going to API Reference Tab > [Stripe API](/api-reference). This page will give you specifics on API endpoints and neccessary methods and data formats.
 
-### Code Block
+## My Stripe API Functionality
 
-Use [fenced code blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) by enclosing code in three backticks and follow the leading ticks with the programming language of your snippet to get syntax highlighting. Optionally, you can also write the name of your code after the programming language.
+Overview of what this Stripe API can do with a succinct description of the endpoints you have access to
 
-```java HelloWorld.java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
-
-````md
-```java HelloWorld.java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
-````
+<AccordionGroup>
+  <Accordion title="Recieving payments with my API integration">
+    `POST` /payment/stripe/YOUR_STRIPE_UNIQUE_INTEGRATION_NAME
+    #
+    This is the endpoint you hit when you want clients to make payments to your stripe account.
+  </Accordion>
+</AccordionGroup>

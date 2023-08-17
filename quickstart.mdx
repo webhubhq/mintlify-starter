@@ -1,18 +1,23 @@
 ---
 title: 'Quickstart'
-description: 'Start building awesome documentation in under 5 minutes'
+description: 'Build a fully functional API in under 5 minutes'
 ---
 <Frame>
   <iframe width="100%" height="315" src="https://www.youtube.com/embed/Id64silK_7M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </Frame>
-## Setup your development
 
-Learn how to update your docs locally and and deploy them to the public.
+#
 
-### Edit and preview
+# Getting Started with WebHUB Dynamic API
+
+Welcome to the Mintlify documentation guide. Follow the instructions below to learn how to deploy, update and supercharge your documentations with the advanced features Mintlify offers.
+
+## 1. Do you need to handle user data?
+
+With this Dynamic API, you can manage your data with the service that best suits your needs!
 
 <AccordionGroup>
-  <Accordion icon="github" title="Clone your docs locally">
+  <Accordion icon="github" title="Manage user data with AWS DynamoDB Tables">
     During the onboarding process, we created a repository on your Github with
     your docs content. You can find this repository on our
     [dashboard](https://dashboard.mintlify.com). To clone the repository
@@ -20,7 +25,7 @@ Learn how to update your docs locally and and deploy them to the public.
     [instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
     in your terminal.
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Preview changes">
+  <Accordion icon="rectangle-terminal" title="Save photos, videos, and files with AWS S3 Bucket">
     Previewing helps you make sure your changes look as intended. We built a
     command line interface to render these changes locally. 1. Install the
     [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the
@@ -30,59 +35,36 @@ Learn how to update your docs locally and and deploy them to the public.
   </Accordion>
 </AccordionGroup>
 
-### Deploy your changes
+## 2. Do you need a way to make transactions?
+
+We offer built in integrations with Stripe's API to make e-commerce a frictionless experience
 
 <AccordionGroup>
-
-<Accordion icon="message-bot" title="Install our Github app">
-  Our Github app automatically deploys your changes to your docs site, so you
-  don't need to manage deployments yourself. You can find the link to install on
-  your [dashboard](https://dashboard.mintlify.com). Once the bot has been
-  successfully installed, there should be a check mark next to the commit hash
-  of the repo.
-</Accordion>
-<Accordion icon="rocket" title="Push your changes">
-  [Commit and push your changes to
-  Git](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository#about-git-push)
-  for your changes to update in your docs site. If you push and don't see that
-  the Github app successfully deployed your changes, you can also manually
-  update your docs through our [dashboard](https://dashboard.mintlify.com).
-</Accordion>
-
+  <Accordion icon="github" title="Implement e-commerce integration with Stripe API">
+    During the onboarding process, we created a repository on your Github with
+    your docs content. You can find this repository on our
+    [dashboard](https://dashboard.mintlify.com). To clone the repository
+    locally, follow these
+    [instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+    in your terminal.
+  </Accordion>
 </AccordionGroup>
 
-## Update your docs
+## 3. Do you have a sign in page?
 
-Add content directly in your files with MDX syntax and React components. You can use any of our components, or even build your own.
+No need to worry about configure your own authentication logic, use our seamless integration with Google OAuth.
 
-<CardGroup>
+<AccordionGroup>
+  <Accordion icon="github" title="Setup user authentication with Google OAuth">
+    During the onboarding process, we created a repository on your Github with
+    your docs content. You can find this repository on our
+    [dashboard](https://dashboard.mintlify.com). To clone the repository
+    locally, follow these
+    [instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+    in your terminal.
+  </Accordion>
+</AccordionGroup>
 
-<Card title="Style Your Docs" icon="paintbrush" href="/settings/global">
-  Add flair to your docs with personalized branding.
-</Card>
+## All Done!
 
-<Card
-  title="Add API Endpoints"
-  icon="square-code"
-  href="/api-playground/configuration"
->
-  Implement your OpenAPI spec and enable API user interaction.
-</Card>
-
-<Card
-  title="Integrate Analytics"
-  icon="chart-mixed"
-  href="/analytics/supported-integrations"
->
-  Draw insights from user interactions with your documentation.
-</Card>
-
-<Card
-  title="Host on a Custom Domain"
-  icon="browser"
-  href="/settings/custom-domain/subdomain"
->
-  Keep your docs on your own website's subdomain.
-</Card>
-
-</CardGroup>
+Congrats! You’ve set up a Dynamic API with Webhub! Need support or want to give some feedback? You can email us at webhubhq@gmail.com.
