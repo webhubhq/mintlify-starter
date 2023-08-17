@@ -77,35 +77,15 @@
         {
           "group": "Create services",
           "pages": [
-            {
-              "group": "Google OAuth",
-              "pages": [
-                "api-reference/endpoint/google-oauth"
-              ]
-            },
-            {
-              "group": "Stripe Integration",
-              "pages": [
-                "api-reference/endpoint/stripe"
-              ]
-            }
+            "api-reference/endpoint/google-oauth",
+            "api-reference/endpoint/stripe"
           ]
         },
         {
           "group": "Create Resources",
           "pages": [
-            {
-              "group": "DynamoDB",
-              "pages": [
-                "api-reference/endpoint/get"
-              ]
-            },
-            {
-              "group": "S3 Bucket",
-              "pages": [
-                "api-reference/endpoint/get"
-              ]
-            }
+            "api-reference/endpoint/dynamodb",
+            "api-reference/endpoint/s3-bucket"
           ]
         }
       ]
@@ -113,19 +93,23 @@
     {
       "group": "DynamoDB API",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/dynamodb-create",
+        {
+          "group": "Read & Query",
+          "pages": [
+            "api-reference/endpoint/dynamodb-read",
+            "api-reference/endpoint/dynamodb-query"
+          ]
+        },
+        "api-reference/endpoint/dynamodb-update",
+        "api-reference/endpoint/dynamodb-delete"
       ]
     },
     {
       "group": "S3 API",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/s3-structure",
+        "api-reference/endpoint/s3-create-path"
       ]
     },
     {
