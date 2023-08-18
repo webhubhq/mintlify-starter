@@ -115,19 +115,13 @@
     {
       "group": "Stripe API",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/stripe-payment"
       ]
     },
     {
       "group": "Google OAuth API",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/google-user-auth"
       ]
     },
     {
