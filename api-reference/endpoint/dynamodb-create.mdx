@@ -6,12 +6,12 @@ description: "Add data to your DynamoDB"
 
 ### Body
 
-<ParamField body="GOOGLE_CLIENT_ID" type="string" required>
-  The Google Client Id that Google generates for you
+<ParamField body="id" type="string" required>
+  The partition key for this element
 </ParamField>
 
-<ParamField body="GOOGLE_CLIENT_SECRET" type="string" required>
-  The Google Client Secret that Google generates for you
+<ParamField body="name" type="string" required>
+  What the id will map to
 </ParamField>
 
 ### Response
@@ -21,7 +21,7 @@ description: "Add data to your DynamoDB"
 </ResponseField>
 
 <ResponseField name="body" type="object">
-  Information concerning your newly created Google OAuth integration
+    Information regarding your create request
 </ResponseField>
 
 <ResponseExample>
@@ -29,10 +29,7 @@ description: "Add data to your DynamoDB"
 ```json Success Response
 {
   "statusCode": 200,
-  "body" {
-    ...
-    compelete: true,
-  }
+  "body" {}
 }
 ```
 
@@ -40,7 +37,15 @@ description: "Add data to your DynamoDB"
 {
   "statusCode": 400,
   "body" {
-    err: { ... },
+    err:  "error": {
+        "message": "One or more parameter values were invalid: Missing the key id in the item",
+        "code": "ValidationException",
+        "time": "2023-08-18T19:37:15.678Z",
+        "requestId": "PM8CAFJ8DP3C27ROARPRBCUPEJVV4KQNSO5AEMVJF66Q9ASUAAJG",
+        "statusCode": 400,
+        "retryable": false,
+        "retryDelay": 45.853296901029964
+    },,
     compelete: false
   }
 }

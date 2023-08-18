@@ -6,12 +6,8 @@ description: "Delete an entry from your DynamoDB table"
 
 ### Body
 
-<ParamField body="GOOGLE_CLIENT_ID" type="string" required>
-  The Google Client Id that Google generates for you
-</ParamField>
-
-<ParamField body="GOOGLE_CLIENT_SECRET" type="string" required>
-  The Google Client Secret that Google generates for you
+<ParamField body="id" type="string" required>
+  ID of the element you want to remove from the table 
 </ParamField>
 
 ### Response
@@ -21,7 +17,7 @@ description: "Delete an entry from your DynamoDB table"
 </ResponseField>
 
 <ResponseField name="body" type="object">
-  Information concerning your newly created Google OAuth integration
+  Information regarding your delete request
 </ResponseField>
 
 <ResponseExample>
@@ -30,8 +26,9 @@ description: "Delete an entry from your DynamoDB table"
 {
   "statusCode": 200,
   "body" {
-    ...
-    compelete: true,
+    
+    "message": "Item deleted"
+
   }
 }
 ```
@@ -40,7 +37,15 @@ description: "Delete an entry from your DynamoDB table"
 {
   "statusCode": 400,
   "body" {
-    err: { ... },
+    err: {
+    "message": "The provided key element does not match the schema",
+    "code": "ValidationException",
+    "time": "2023-08-18T20:20:02.857Z",
+    "requestId": "K0I8M4RP3CAH2S9MM1PVGLG2GRVV4KQNSO5AEMVJF66Q9ASUAAJG",
+    "statusCode": 400,
+    "retryable": false,
+    "retryDelay": 37.399809106962046
+},
     compelete: false
   }
 }

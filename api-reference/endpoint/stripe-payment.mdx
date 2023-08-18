@@ -6,16 +6,20 @@ description: "Hit this endpoint to execute business logic concerning processing 
 
 ### Path
 
-<ParamField path="YOUR_STRIPE_NAME" type="string" required>
-  The name of the Stripe API integration you want to reference.
+<ParamField body="amount" type="number" required>
+  The amount of the transaction
 </ParamField>
+
+<ParamField body="currency" type="string" required>
+  The currency that the amount is being paid in 
+</ParamField>
+
+<ParamField body="token" type="string" required>
+  The visa token containing private infromation regarding the transaction
+</ParamField>
+
 
 ### Body
-
-<ParamField body="current_token" type="string">
-  This is the current user group token you have for the user group that you want
-  to rotate.
-</ParamField>
 
 ### Response
 
@@ -24,7 +28,7 @@ description: "Hit this endpoint to execute business logic concerning processing 
 </ResponseField>
 
 <ResponseField name="body" type="object">
-  Information concerning stripe payment details
+  Information concerning details about the stripe transaction
 </ResponseField>
 
 <ResponseExample>
@@ -33,9 +37,11 @@ description: "Hit this endpoint to execute business logic concerning processing 
 {
   "statusCode": 200,
   "body" {
-    ...
-    compelete: true,
-  }
+    "message": {
+        "message": "Payment successful!",
+        "charge_id": "ch_3NgZjnKG64TDGlcq1zwBFPmC"
+    }
+}
 }
 ```
 

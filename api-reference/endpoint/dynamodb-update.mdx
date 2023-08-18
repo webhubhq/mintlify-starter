@@ -6,12 +6,12 @@ description: "Update an entry in your DynamoDB table"
 
 ### Body
 
-<ParamField body="GOOGLE_CLIENT_ID" type="string" required>
-  The Google Client Id that Google generates for you
+<ParamField body="id" type="string" required>
+  The ID of the entry you want to change 
 </ParamField>
 
-<ParamField body="GOOGLE_CLIENT_SECRET" type="string" required>
-  The Google Client Secret that Google generates for you
+<ParamField body="name" type="string" required>
+  What you want to change the entry to
 </ParamField>
 
 ### Response
@@ -21,7 +21,7 @@ description: "Update an entry in your DynamoDB table"
 </ResponseField>
 
 <ResponseField name="body" type="object">
-  Information concerning your newly created Google OAuth integration
+  Information regarding your update request
 </ResponseField>
 
 <ResponseExample>
@@ -30,8 +30,8 @@ description: "Update an entry in your DynamoDB table"
 {
   "statusCode": 200,
   "body" {
-    ...
-    compelete: true,
+    "message": "Item updated"
+
   }
 }
 ```
@@ -40,7 +40,15 @@ description: "Update an entry in your DynamoDB table"
 {
   "statusCode": 400,
   "body" {
-    err: { ... },
+    err: {
+    "message": "The provided key element does not match the schema",
+    "code": "ValidationException",
+    "time": "2023-08-18T20:21:13.322Z",
+    "requestId": "P1SOGBUGG06C1HKF2U2GIUR8I7VV4KQNSO5AEMVJF66Q9ASUAAJG",
+    "statusCode": 400,
+    "retryable": false,
+    "retryDelay": 26.247972152830666
+},
     compelete: false
   }
 }
