@@ -1,8 +1,14 @@
 ---
 title: "Authenticate Users"
-api: "POST /auth/google/{YOUR_GOOGLE_OAUTH_NAME}"
+api: "POST /auth/google/{YOUR_INTEGRATION_NAME}"
 description: "Hit this endpoint to authenticate your users"
 ---
+
+## Path
+
+<ParamField path="YOUR_INTEGRATION_NAME" type="string" required>
+  The name of your Google OAuth integration that you want to reference.
+</ParamField>
 
 ### Response
 

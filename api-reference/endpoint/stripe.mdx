@@ -4,6 +4,12 @@ api: "POST /create/service/payment/stripe/{YOUR_INTEGRATION_NAME}"
 description: "This endpoint creates a new Stripe API integration"
 ---
 
+## Path
+
+<ParamField path="YOUR_INTEGRATION_NAME" type="string" required>
+  The name that you want to use to reference the Stripe API integration you are creating. Must only be alpha numeric with only lower case letters and no special characters except hyphens.
+</ParamField>
+
 ### Response
 
 <ResponseField name="statusCode" type="number">

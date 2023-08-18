@@ -1,8 +1,18 @@
 ---
 title: "Add files and folders"
-api: "POST /db/s3/{YOUR_BUCKET_NAME}/create/{path+}"
+api: "POST /db/s3/{YOUR_BUCKET_NAME}/create/{PATH}"
 description: "Create new folders and upload files to specific directories"
 ---
+
+## Path
+
+<ParamField path="YOUR_BUCKET_NAME" type="string" required>
+  The name of the S3 bucket you want to create folders and files in.
+</ParamField>
+
+<ParamField path="PATH" type="string" required>
+  The path that you would like to add folders or files to of the form "/folder1/folder2" or empty string if you want to add a file to the root directory.
+</ParamField>
 
 ### Response
 
