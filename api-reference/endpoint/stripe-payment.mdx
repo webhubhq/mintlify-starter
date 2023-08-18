@@ -1,0 +1,22 @@
+---
+title: "Recieve Payment"
+api: "POST https://api.mintlify.com/payment/stripe/{YOUR_STRIPE_NAME}"
+description: "Hit this endpoint to execute business logic concerning processing transactions between you and your clients"
+---
+
+### Body
+
+<ParamField body="current_token" type="string">
+  This is the current user group token you have for the user group that you want
+  to rotate.
+</ParamField>
+
+### Response
+
+<ResponseField name="statusCode" type="number">
+  Based off of standard HTTP request guidelines
+</ResponseField>
+
+<ResponseField name="body" type="object">
+  Information concerning stripe payment details
+</ResponseField>
