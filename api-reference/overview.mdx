@@ -11,30 +11,26 @@ description: ""
 
 This page holds all the information you will need to create, manage, and test the services and resources you create. The first thing you should be familiar with is our built in API platform (screenshot below).
 
-The our API platform makes the process of working with your api frictionless. Our custom HTTP request setup, makes it virtually impossible to make a mistake when sending HTTP request. This means that your infrastructure and services will always behave properly
-
-## How can I create Services and Resources?
-
-The Dynamic API section servers as your one stop shop for creating resources.
-
-**Step 1.** Go to our API Reference tab (screenshot below):
-
 <Frame>
   <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
 </Frame>
 
-**Step 2.** Second, read through the Overview page to get a better understanding of what this Dynamic API has to offer and how to best leverage it for your business use case.
+The our API platform makes the process of working with your api frictionless. Our custom HTTP request setup, makes it virtually impossible to make a mistake when sending HTTP request. This means that your infrastructure and services will always behave properly.
 
-**Step 3.** Lastly, go through our Walkthrough Tutorial page to get a hands on experience with building, testing, and managing your API. 
+## The Power of the API Platform
 
-## I'm a technical user, lets get the ball rolling!
+Interact with real requests and responses to get real results!
 
-Great! So you know all about APIs. You can use your favorite API platform, in the overview below we will be using Postman to show you an example of endpoints you can create.
-
-**Step 1.** Click on our API Reference tab above then look through the Dynamic API section (screenshot below). Here you will see that we have neatly organized the APIs functionality into easy to use endpoints based off of REST API and OpenAPI standards. 
-
-<Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-**Step 2.** Once you have built your first AWS resource or service you can look through the rest of the sections (DynamoDB API, S3 API, etc) to see how you can communicate with these resources and services. You'll find that each API exposes extremely useful functionality that AWS and our partnering services provide. We made sure to focus on keeping our APIs succinct and specific while not loosing the customizablity and flexbility that comes with a custom solution. But enought said, go check it out yourself.
+<AccordionGroup>
+  <Accordion icon="github" title="Creating services and resources">
+    Build your API by going to the Dynamic API section and clicking on either [Create Services](/api-reference/endpoint/google-oauth) or [Create Resources](/api-reference/endpoint/dynamodb). Each of these pages has an API Platform you can work with and a corresponding Request Body and Response Body documentation that you can use to easily fill out the neccesary data to get your services and resources up and running.
+  </Accordion>
+  <Accordion icon="aws" title="Managing your API">
+    You can see the general structure and functionality of your built out API at the [Documentation tab](/), but API Reference is where you get an in depth and interactive experience with your API. Below is an example 
+    > Lets say you just upload important files for your business in an S3 bucket you created using the API Platform under S3 API > [Add files and folders](/api-reference/endpoint/s3-create-path). You can manage your S3 bucket by going to the S3 API > [Get Structure](/api-reference/endpoint/s3-structure) and use the API Platform on that page to see the current live state of your S3 bucket and insure that your files have been uploaded properly.
+  </Accordion>
+  <Accordion icon="aws" title="Testing your API">
+    Test your API’s functionality by simply hitting the endpoint you need. For example...
+    > Let's say you've setup a Stripe API integration for your API, you can test that the API is working by going to Stripe API > [Recieve Payment](/api-reference/endpoint/stripe-payment) and make a real request using the API Platform on that page. Once the response body gets returned it will tell you everything you need to know about the state of your Stripe API integration.
+  </Accordion>
+</AccordionGroup>

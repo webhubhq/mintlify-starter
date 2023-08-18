@@ -1,5 +1,8 @@
 {
   "$schema": "https://mintlify.com/schema.json",
+  "api": {
+    "baseUrl": "https://odol43j1ua.execute-api.us-east-2.amazonaws.com"
+  },
   "name": "API Kit",
   "logo": {
     "dark": "/logo/mintlify-webhub-logo-dark.png",

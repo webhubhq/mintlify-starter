@@ -1,8 +1,18 @@
 ---
 title: "Google OAuth API"
-api: "POST https://api.mintlify.com/create/service/auth/google/{YOUR_GOOGLE_OAUTH_INTEGRATION_NAME}"
+api: "POST /create/service/auth/google/{YOUR_GOOGLE_OAUTH_INTEGRATION_NAME}"
 description: "This endpoint creates a new Google OAuth integration"
 ---
+
+### Body
+
+<ParamField body="GOOGLE_CLIENT_ID" type="string" required>
+  The Google Client Id that Google generates for you
+</ParamField>
+
+<ParamField body="GOOGLE_CLIENT_SECRET" type="string" required>
+  The Google Client Secret that Google generates for you
+</ParamField>
 
 ### Response
 
