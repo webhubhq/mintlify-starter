@@ -26,3 +26,27 @@ description: "Hit this endpoint to execute business logic concerning processing 
 <ResponseField name="body" type="object">
   Information concerning stripe payment details
 </ResponseField>
+
+<ResponseExample>
+
+```json Success Response
+{
+  "statusCode": 200,
+  "body" {
+    ...
+    compelete: true,
+  }
+}
+```
+
+```json Error Response
+{
+  "statusCode": 400,
+  "body" {
+    err: { ... },
+    compelete: false
+  }
+}
+```
+
+</ResponseExample>

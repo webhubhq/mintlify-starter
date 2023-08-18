@@ -29,3 +29,27 @@ description: "This endpoint creates a new Google OAuth integration"
 <ResponseField name="body" type="object">
   Information concerning your newly created Google OAuth integration
 </ResponseField>
+
+<ResponseExample>
+
+```json Success Response
+{
+  "statusCode": 200,
+  "body" {
+    ...
+    compelete: true,
+  }
+}
+```
+
+```json Error Response
+{
+  "statusCode": 400,
+  "body" {
+    err: { ... },
+    compelete: false
+  }
+}
+```
+
+</ResponseExample>

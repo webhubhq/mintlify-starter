@@ -19,3 +19,27 @@ description: "Hit this endpoint to authenticate your users"
 <ResponseField name="body" type="object">
   Information concerning the Google OAuth request
 </ResponseField>
+
+<ResponseExample>
+
+```json Success Response
+{
+  "statusCode": 200,
+  "body" {
+    ...
+    compelete: true,
+  }
+}
+```
+
+```json Error Response
+{
+  "statusCode": 400,
+  "body" {
+    err: { ... },
+    compelete: false
+  }
+}
+```
+
+</ResponseExample>

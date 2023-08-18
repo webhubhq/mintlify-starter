@@ -19,3 +19,27 @@ description: "This endpoint returns the structure of your s3 Bucket, allowing yo
 <ResponseField name="body" type="object">
   Information concerning s3 bucket request
 </ResponseField>
+
+<ResponseExample>
+
+```json Success Response
+{
+  "statusCode": 200,
+  "body" {
+    ...
+    compelete: true,
+  }
+}
+```
+
+```json Error Response
+{
+  "statusCode": 400,
+  "body" {
+    err: { ... },
+    compelete: false
+  }
+}
+```
+
+</ResponseExample>
