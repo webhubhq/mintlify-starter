@@ -4,6 +4,12 @@ api: "GET /create/service/db/dynamodb/{YOUR_DB_NAME}"
 description: "This endpoint creates a new DynamoDB and an API to communicate with it"
 ---
 
+### Path
+
+<ParamField path="YOUR_DB_NAME" type="string" required>
+  The name that you want to use to reference the DynamoDB you are creating. Must only be alpha numeric with only lower case letters and no special characters except hyphens.
+</ParamField>
+
 ### Response
 
 <ResponseField name="statusCode" type="number">

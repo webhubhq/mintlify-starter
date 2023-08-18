@@ -4,5 +4,23 @@ api: "DELETE /db/dynamodb/delete"
 description: "Delete an entry from your DynamoDB table"
 ---
 
+### Body
+
+<ParamField body="GOOGLE_CLIENT_ID" type="string" required>
+  The Google Client Id that Google generates for you
+</ParamField>
+
+<ParamField body="GOOGLE_CLIENT_SECRET" type="string" required>
+  The Google Client Secret that Google generates for you
+</ParamField>
+
 ### Response
+
+<ResponseField name="statusCode" type="number">
+  Based off of standard HTTP request guidelines
+</ResponseField>
+
+<ResponseField name="body" type="object">
+  Information concerning your newly created Google OAuth integration
+</ResponseField>
 
