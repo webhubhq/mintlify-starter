@@ -1,0 +1,15 @@
+---
+title: "Authenticate Users"
+api: "POST https://api.mintlify.com/auth/google/{YOUR_GOOGLE_OAUTH_NAME}"
+description: "Hit this endpoint to authenticate your users"
+---
+
+### Response
+
+<ResponseField name="statusCode" type="number">
+  Based off of standard HTTP request guidelines
+</ResponseField>
+
+<ResponseField name="body" type="object">
+  Information concerning the Google OAuth request
+</ResponseField>
