@@ -1,8 +1,14 @@
 ---
 title: "Update"
-api: "PUT /dynamodb/ricksdb1/update"
+api: "PUT /dynamodb/{YOUR_DB_NAME}/update"
 description: "Update an entry in your DynamoDB table"
 ---
+
+### Path
+
+<ParamField path="YOUR_DB_NAME" type="string" required>
+  The name of the DynamoDB you want to interact with.
+</ParamField>
 
 ### Body
 

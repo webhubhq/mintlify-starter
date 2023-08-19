@@ -1,8 +1,14 @@
 ---
 title: "Read All"
-api: "GET /dynamodb/ricksdb1/read"
+api: "GET /dynamodb/{YOUR_DB_NAME}/read"
 description: "Read data from your DynamoDB table"
 ---
+
+### Path
+
+<ParamField path="YOUR_DB_NAME" type="string" required>
+  The name of the DynamoDB you want to interact with.
+</ParamField>
 
 ### Body
 

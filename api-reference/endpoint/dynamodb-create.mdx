@@ -1,8 +1,14 @@
 ---
 title: "Create"
-api: "POST /dynamodb/ricksdb1/create"
+api: "POST /dynamodb/{YOUR_DB_NAME}/create"
 description: "Add data to your DynamoDB"
 ---
+
+### Path
+
+<ParamField path="YOUR_DB_NAME" type="string" required>
+  The name of the DynamoDB you want to interact with.
+</ParamField>
 
 ### Body
 

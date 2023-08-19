@@ -1,8 +1,14 @@
 ---
 title: "Delete"
-api: "DELETE /dynamodb/ricksdb1/delete"
+api: "DELETE /dynamodb/{YOUR_DB_NAME}/delete"
 description: "Delete an entry from your DynamoDB table"
 ---
+
+### Path
+
+<ParamField path="YOUR_DB_NAME" type="string" required>
+  The name of the DynamoDB you want to interact with.
+</ParamField>
 
 ### Body
 
