@@ -1,66 +1,54 @@
 ---
 title: 'S3 Bucket'
-description: 'The navigation field in mint.json defines the pages that go in the navigation menu'
+description: 'View and manage your S3 API'
 icon: 'bucket'
 ---
 
-The navigation menu is the list of links on every website.
+## Name of S3 Bucket 1
+_/db/dynamodb/\{YOUR_UNIQUE_BUCKET_NAME_1\}_
+<AccordionGroup>
+  <Accordion title="View Details">
+    > Created on 07/23/2023
+  </Accordion>
+</AccordionGroup>
 
-You will likely update `mint.json` every time you add a new page. Pages do not show up automatically.
+## Name of S3 Bucket 2
+_/db/dynamodb/\{YOUR_UNIQUE_BUCKET_NAME_2\}_
+<AccordionGroup>
+  <Accordion title="View Details">
+    > Created on 08/17/2023
 
-## Navigation syntax
+    #
 
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
+    | Name              | Type              | Required          |
+    | ----------------- | ----------------- | ----------------- |
+    | id                | String            | True              |
+    | name              | String            | False             |
 
-<CodeGroup>
+    #
 
-```json Regular Navigation
-"navigation": [
-    {
-        "group": "Getting Started",
-        "pages": ["quickstart"]
-    }
-]
-```
+    <Tip>**Single Source of Truth:** auto generated parsing of DynamoDB table</Tip>
+  </Accordion>
+</AccordionGroup>
 
-```json Nested Navigation
-"navigation": [
-    {
-        "group": "Getting Started",
-        "pages": [
-            "quickstart",
-            {
-                "group": "Nested Reference Pages",
-                "pages": ["nested-reference-page"]
-            }
-        ]
-    }
-]
-```
+#
 
-</CodeGroup>
+Learn more by going to API Reference Tab > [S3 API](/api-reference/endpoint/s3-structure). This page will give you specifics on API endpoints and neccessary methods and data formats.
 
-## Folders
+## My S3 API Functionality
 
-Simply put your MDX files in folders and update the paths in `mint.json`.
+Below is a basic overview of the functionality of your S3 API.
 
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
+<AccordionGroup>
+  <Accordion title="Look for files and folders in your S3 Bucket">
+    `POST` /payment/stripe/\{YOUR_INTEGRATION_NAME\}
+    #
+    This is the endpoint you hit when you want clients to make payments to your stripe account.
+  </Accordion>
+  <Accordion title="Create files and folders inside your bucket">
+    `POST` /payment/stripe/\{YOUR_INTEGRATION_NAME\}
+    #
+    This is the endpoint you hit when you want clients to make payments to your stripe account.
+  </Accordion>
+</AccordionGroup>
 
-<Warning>
-
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
-
-</Warning>
-
-```json Navigation With Folder
-"navigation": [
-    {
-        "group": "Group Name",
-        "pages": ["your-folder/your-page"]
-    }
-]
-```
-
-## Hidden Pages
-
-MDX files not included in `mint.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
