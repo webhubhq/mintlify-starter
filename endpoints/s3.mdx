@@ -17,17 +17,6 @@ _/db/dynamodb/\{YOUR_UNIQUE_BUCKET_NAME_2\}_
 <AccordionGroup>
   <Accordion title="View Details">
     > Created on 08/17/2023
-
-    #
-
-    | Name              | Type              | Required          |
-    | ----------------- | ----------------- | ----------------- |
-    | id                | String            | True              |
-    | name              | String            | False             |
-
-    #
-
-    <Tip>**Single Source of Truth:** auto generated parsing of DynamoDB table</Tip>
   </Accordion>
 </AccordionGroup>
 
@@ -41,14 +30,14 @@ Below is a basic overview of the functionality of your S3 API.
 
 <AccordionGroup>
   <Accordion title="Look for files and folders in your S3 Bucket">
-    `POST` /payment/stripe/\{YOUR_INTEGRATION_NAME\}
+    `GET` /v3/db/s3/\{YOUR_BUCKET_NAME\}/structure
     #
-    This is the endpoint you hit when you want clients to make payments to your stripe account.
+    This end point allows you to see the current file structure of your S3 Bucket. This is useful when you want to look for folders /files in your S3 Bucket or check that edits made to your S3 Bucket have been saved. 
   </Accordion>
   <Accordion title="Create files and folders inside your bucket">
-    `POST` /payment/stripe/\{YOUR_INTEGRATION_NAME\}
+    `POST` /v3/db/s3/\{YOUR_BUCKET_NAME\}/create/\{PATH\}
     #
-    This is the endpoint you hit when you want clients to make payments to your stripe account.
+    This endpoint creates a folder path for your S3 Bucket of value \{PATH\} and if files are uploaded through the body of the POST request, those files will be saved at that directory path. 
   </Accordion>
 </AccordionGroup>
 
