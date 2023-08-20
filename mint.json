@@ -66,8 +66,8 @@
     {
       "group": "My API Resources",
       "pages": [
-        "endpoints/dynamoDB",
-        "endpoints/s3"
+        "endpoints/db/dynamoDB",
+        "endpoints/db/s3"
       ]
     },
     {
