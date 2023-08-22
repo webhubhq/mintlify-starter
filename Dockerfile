@@ -5,10 +5,10 @@ FROM node:18
 WORKDIR /app
 
 # Copy package.json and package-lock.json (if available) to the container's working directory
-COPY package*.json ./
+COPY mint.json ./
 
 # Install any needed dependencies using npm
-RUN npm install
+RUN npm i -g mintlify
 
 # Copy the rest of the application code into the container
 COPY . .
