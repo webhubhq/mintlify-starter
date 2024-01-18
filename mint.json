@@ -37,6 +37,10 @@
       "url": "api-reference"
     },
     {
+      "name": "Welcome HackMIT",
+      "url": "hackmit"
+    },
+    {
       "name": "About Webhub",
       "url": "about-webhub"
     }
@@ -47,7 +51,7 @@
       "pages": ["quickstart", "overview"]
     },
     {
-      "group": "My API Services",
+      "group": "API Services",
       "pages": [
         {
           "group": "Auth as a Service",
@@ -64,7 +68,7 @@
       ]
     },
     {
-      "group": "My API Resources",
+      "group": "API Resources",
       "pages": [
         "endpoints/db/dynamoDB",
         "endpoints/db/s3"
@@ -125,6 +129,12 @@
       "group": "Google OAuth API",
       "pages": [
         "api-reference/endpoint/google-user-auth"
+      ]
+    },
+    {
+      "group": "Welcome HackMIT",
+      "pages": [
+        "hackmit/welcome"
       ]
     },
     {
